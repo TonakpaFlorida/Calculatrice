@@ -1,9 +1,9 @@
 const touches = [...document.querySelectorAll('.bouton')]; 
 const listeKeycode = touches.map(touche => touche.dataset.key);
-const ecran = document.querySelector('ecran')
+const ecran = document.querySelector('.ecran')
 
 document.addEventListener('keydown', (e) => {
-    const valeur = e.keyCode.tiString() 
+    const valeur = e.keyCode.toString() 
 })
  
 document.addEventListener('click', (e) => {
@@ -22,7 +22,7 @@ const calculer = (valeur) => {
                 ecran.textContent = calcul;
                 break;
             default:
-                const indexKeycode = listeKeycode.index0f(valeur);
+                const indexKeycode = listeKeycode.indexOf(valeur);
                 const touche = touches [indexKeycode]
                 ecran.textContent += touche.innerHTML;
         }
@@ -30,4 +30,3 @@ const calculer = (valeur) => {
     }
 }
 
-window.addEventListener('error', (e) => console.log(e))
